@@ -8,7 +8,7 @@ import TicketForm from './component/TicketForm';
 
 
 function App() {
-  //window.location="/Home";
+  
   return (
     <div>
 
@@ -24,7 +24,6 @@ function App() {
         </div>
       </Router>
 
-      {/* <TicketForm/> */}
     </div>
 
 

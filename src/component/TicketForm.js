@@ -5,6 +5,7 @@ import './TicketForm.css';
 function TicketForm() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
+    const [ticketBooked, setTicketBooked] = useState(false);
 
     const clickHandler = (event) => {
         event.preventDefault();
@@ -12,7 +13,7 @@ function TicketForm() {
         console.log(event.target.value);
         localStorage.setItem("name", name);
         localStorage.setItem("email", email);
-
+        setTicketBooked(true);
     };
 
     const handleNameChange = (event) => {
@@ -44,8 +45,10 @@ function TicketForm() {
                     />
 
                     <br />
-                    <button type="submit">BookTicket</button>
+                    <button type="submit">Book Ticket</button>
                 </form>
+
+                {ticketBooked && <p>Your ticket has been booked!</p>}
 
                 <Link to="/" className="back-home-btn">Go Back to Home</Link>
             </div>

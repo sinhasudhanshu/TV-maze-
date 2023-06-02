@@ -9,6 +9,7 @@ function ShowSummary(props) {
     axios.get(`https://api.tvmaze.com/shows/${props.showId}?embed=cast`)
       .then(response => {
         setSummary(response.data.summary);
+        
       })
       .catch(error => {
         console.log(error);
